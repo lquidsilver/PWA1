@@ -1,4 +1,7 @@
-// JavaScript Document
+/*Name: Arif Wright
+  Date: 12/2/13
+  Assignment: The Duel Part 1
+*/
 
 // Self-executing function
 (function(){
