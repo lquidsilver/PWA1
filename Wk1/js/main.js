@@ -5,8 +5,6 @@
 
 // Self-executing function
 (function(){
-
-	console.log("FIGHT!!!");
 	//player's name
 	var playerOneName = "Kobal";
 	var playerTwoName = "Kratos";
@@ -29,30 +27,31 @@
 			//inflcit damage
 			playerOneHealth -= f1;
 			playerTwoHealth -= f2;
-			
-		};
-		var results = winnerCheck();
-		if(results === "No Winner"){
-			round++;
-			alert(playerOneName+":"+playerOneHealth+" *ROUND "+round+" OVER* "+playerTwoName+":"+playerTwoHealth);
-		};
-		else{
-			alert(results);
-			break;
+		
+			var results = winnerCheck();
+		
+			if(results === "No Winner"){
+				round++;
+				alert(playerOneName+":"+playerOneHealth+" *ROUND "+round+" OVER* "+playerTwoName+":"+playerTwoHealth);
+			}
+			else{
+				alert(results);
+				break;
+			}
 		};
 	};
 	
 	function winnerCheck(){
 		var result = "No Winner";
-		if(playerOneHealth<1 && playerTwoHealth<1){
-			result = "Both Players Die";	
-		};
-		else if(playerOneHealth<1){
-			var result = playerTwoName+" Wins!!"
-		};
-		else if(playerTwoHealth<1){
-			var result = playerOneName+" Wins!!"
-		};
+		if(playerOneHealth < 1 && playerTwoHealth < 1){
+			var result = "Both Players Die";	
+		}
+		else if(playerOneHealth < 1){
+			var result = playerTwoName+" Wins!!";
+		}
+		else if(playerTwoHealth < 1){
+			var result = playerOneName+" Wins!!";
+		}
 		return result;
 		
 	};
